@@ -1,4 +1,4 @@
-# 🚀 Meeth Amin – Software Engineer Portfolio
+# 🚀 Meeth Amin's Portfolio
 
 [![Portfolio](https://img.shields.io/badge/Live%20Portfolio-blueviolet?style=for-the-badge&logo=github&logoColor=white)](https://meethcodes.github.io)
 [![GitHub Repo](https://img.shields.io/badge/Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/meethcodes/meethcodes.github.io)
