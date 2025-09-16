@@ -5,8 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Add this base configuration at the top level
-  base: '/MeethCodes.github.io/', // <--- Add this line here
+  // The base must be '/' for a username.github.io repository
+  base: '/', // <--- This is the final, correct setting
   server: {
     host: "::",
     port: 8080,
