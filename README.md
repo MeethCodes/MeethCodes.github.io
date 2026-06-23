@@ -1,64 +1,64 @@
-# 🚀 Meeth Amin's Portfolio
+# Meeth Amin — Portfolio
 
-[![Portfolio](https://img.shields.io/badge/Live%20Portfolio-blueviolet?style=for-the-badge&logo=github&logoColor=white)](https://meethcodes.github.io)
-[![GitHub Repo](https://img.shields.io/badge/Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/meethcodes/meethcodes.github.io)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Python](https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-[![License](https://img.shields.io/badge/MIT-green?style=for-the-badge)](LICENSE)
+**Live:** [meethcodes.github.io](https://meethcodes.github.io)
 
----
+Midnight Garage themed portfolio for an AIML Engineer — built with React, TypeScript, Vite, Tailwind, Framer Motion, and a RAG-powered chatbot.
 
-![Portfolio Screenshot](./public/screenshot.png)
+## Features
 
-## ✨ Overview
+- Cinematic dark UI with purple-teal gradient accents
+- Typing hero, 3D particle field (desktop), recruiter mode, UI sounds
+- Live GitHub stats and repository feed
+- RAG resume chatbot (Groq + Cloudflare Worker)
+- Web3Forms contact integration
 
-Welcome to the personal portfolio of **Meeth Amin**, a passionate Software Engineer with a specialization in **Artificial Intelligence & Machine Learning**. This portfolio showcases my journey, skills, projects, and passion for building intelligent applications with a modern tech stack.
-
----
-
-## 🎯 Features
-
-- 📌 **Dynamic Content Sections** – About, Skills, Projects, and Contact.
-- 💡 **Responsive UI** – Optimized across mobile, tablet, and desktop screens.
-- 🎨 **Theme Support** – Toggle between Light, Dark, and Purple themes.
-- ✨ **Smooth Animations** – Powered by Framer Motion.
-- ⚡ **Performance Focused** – Lazy loading for a fast user experience.
-- 📬 **Functional Contact Form** – Integrated with Web3Forms API.
-
----
-
-## 🛠️ Tech Stack
-
-| Category         | Tech Used                                    |
-| ---------------- | -------------------------------------------- |
-| Frontend         | React (TypeScript), Vite                     |
-| Styling          | Tailwind CSS, Shadcn/UI                      |
-| AI/ML            | Python, TensorFlow, PyTorch, Scikit-learn    |
-| Animations       | Framer Motion                                |
-| Form Handling    | Web3Forms API                                |
-| Linting/Format   | ESLint                                       |
-
----
-
-## ⚙️ Getting Started
-
-> To run this project locally, follow these steps:
-
-### 🔧 Prerequisites
-
-- Node.js v16+
-- npm or yarn
-
-### 🚀 Installation & Development
+## Local Development
 
 ```bash
-# Clone the repository
-git clone [https://github.com/meethcodes/meethcodes.github.io.git](https://github.com/meethcodes/meethcodes.github.io.git)
-cd meethcodes.github.io
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
+```
+
+## Environment Variables
+
+Copy `.env.example` to `.env.local`:
+
+| Variable | Description |
+|----------|-------------|
+| `VITE_WEB3FORMS_KEY` | Web3Forms access key |
+| `VITE_CHAT_API_URL` | Cloudflare Worker chat endpoint |
+
+## Deploy (GitHub Pages)
+
+Pushes to `main` auto-deploy via GitHub Actions to `gh-pages`.
+
+Optional GitHub secrets:
+- `VITE_WEB3FORMS_KEY`
+- `VITE_CHAT_API_URL`
+
+## Chat Worker Setup
+
+```bash
+# 1. Login to Cloudflare
+npx wrangler login
+
+# 2. Set Groq API key (free at groq.com)
+npx wrangler secret put GROQ_API_KEY
+
+# 3. Deploy worker
+npm run worker:deploy
+
+# 4. Add worker URL to .env.local and GitHub secret VITE_CHAT_API_URL
+```
+
+## Add Your Headshot
+
+Place your photo at `public/imgs/me.png` (recommended 400×400px).
+
+## Phase 2 — Projects
+
+Featured projects section is a placeholder until new repos go public. Send repo names + screenshots to enable full project cards.
+
+## Tech Stack
+
+React 18 · TypeScript · Vite · Tailwind CSS · Framer Motion · GSAP · Lenis · React Three Fiber · TanStack Query · Cloudflare Workers · Groq

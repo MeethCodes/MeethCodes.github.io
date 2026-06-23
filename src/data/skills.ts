@@ -1,36 +1,65 @@
-import { Code, Database, Layout, Terminal, Cpu, Bot } from "lucide-react"; // Note: Added 'Bot' for the new category
-import { LucideIcon } from "lucide-react";
-
 export type SkillCategory = {
+  id: string;
   name: string;
-  icon: LucideIcon;
   skills: string[];
+  span?: "sm" | "md" | "lg";
 };
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: "Programming Languages",
-    icon: Terminal,
-    skills: ["Python", "Java", "Kotlin", "C++", "JavaScript"],
+    id: "languages",
+    name: "Languages & Mobile",
+    span: "lg",
+    skills: ["Python", "C", "C++", "Kotlin", "Jetpack Compose", "JavaScript"],
   },
   {
-    name: "AI/ML Development",
-    icon: Bot, // A new icon for this category
-    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP"],
+    id: "aiml",
+    name: "AI / ML",
+    span: "lg",
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "Hugging Face",
+      "LangChain",
+      "LoRA / QLoRA",
+      "RAG",
+      "LLM Fine-tuning",
+      "NLP",
+    ],
   },
   {
-    name: "Full-Stack Development",
-    icon: Layout,
-    skills: ["Android Development", "Full-Stack Web Dev", "REST APIs"],
+    id: "cloud",
+    name: "Cloud & Infra",
+    span: "md",
+    skills: [
+      "AWS",
+      "Docker",
+      "Nginx",
+      "Gitea",
+      "Firebase",
+      "Heroku",
+      "Render",
+      "fail2ban",
+      "CrowdSec",
+    ],
   },
   {
+    id: "databases",
     name: "Databases",
-    icon: Database,
-    skills: ["SQL", "Firebase"],
+    span: "md",
+    skills: ["PostgreSQL", "MySQL", "Qdrant", "Neo4j", "DynamoDB"],
   },
   {
-    name: "Tools & Technologies",
-    icon: Cpu,
-    skills: ["Git", "GitHub", "GitHub CLI", "Arduino"],
+    id: "automation",
+    name: "Automation",
+    span: "md",
+    skills: ["n8n", "Azure Automation", "Lindy AI", "Shell scripting", "ntfy"],
   },
+];
+
+export const statCounters = [
+  { label: "Public Repos", value: 12, suffix: "+" },
+  { label: "Languages", value: 4, suffix: "" },
+  { label: "Certifications", value: 7, suffix: "+" },
+  { label: "Years Coding", value: 4, suffix: "+" },
 ];

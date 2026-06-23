@@ -1,0 +1,9 @@
+name = "meeth-portfolio-chat"
+main = "workers/chat/src/index.ts"
+compatibility_date = "2024-11-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://meethcodes.github.io"
+CHUNKS_URL = "https://meethcodes.github.io/rag/chunks.json"
+
+# Set secret via: wrangler secret put GROQ_API_KEY
